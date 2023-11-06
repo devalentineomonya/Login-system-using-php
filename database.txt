@@ -1,0 +1,46 @@
+- Database: `login_db`
+--
+CREATE DATABASE IF NOT EXISTS `login_db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `login_db`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_users`
+--
+
+CREATE TABLE `tbl_users` (
+  `Id` int(10) UNSIGNED NOT NULL,
+  `first_name` varchar(150) NOT NULL,
+  `last_name` varchar(150) NOT NULL,
+  `location` varchar(150) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`Id`, `first_name`, `last_name`, `location`, `email`, `password`) VALUES
+(26, 'Faustine', 'Lenzau', 'Amukura', 'faustine@gmail.com', '123');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
